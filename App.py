@@ -28,7 +28,7 @@ st.markdown("""
             color: #ad1457;
         }
         .stButton button {
-            background-color: #f06292;
+            background-color: #fcb3cc;
             color: white;
             border-radius: 10px;
             font-size: 18px;
@@ -94,4 +94,5 @@ dígitos escritos a mano.
 
 Basado en el desarrollo de Vinay Uniyal.
 """)
+
 
