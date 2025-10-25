@@ -12,37 +12,37 @@ st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layo
 st.markdown("""
     <style>
         body {
-            background-color: #ffeef8;
+            background-color: #fdeef4; /* Rosado pastel claro */
             font-family: 'Trebuchet MS', sans-serif;
             color: #2e2e2e;
         }
         .main {
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
         }
         h1, h2, h3, h4 {
             text-align: center;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            color: #AD1457;
+            color: #ad1457;
         }
         .stButton button {
-            background-color: #F06292;
+            background-color: #f06292;
             color: white;
             border-radius: 10px;
             font-size: 18px;
             transition: 0.3s;
         }
         .stButton button:hover {
-            background-color: #EC407A;
+            background-color: #ec407a;
             transform: scale(1.05);
         }
     </style>
 """, unsafe_allow_html=True)
 
 # TÍTULOS
-st.title('💖 Reconocimiento de Dígitos escritos a mano')
+st.title('💗 Reconocimiento de Dígitos escritos a mano')
 st.subheader("✍️ Dibuja el dígito en el panel y presiona 'Predecir'")
 
 # CONFIGURACIÓN DEL CANVAS
@@ -51,12 +51,12 @@ stroke_color = '#FFFFFF'
 bg_color = '#000000'
 
 canvas_result = st_canvas(
-    fill_color="rgba(255, 165, 0, 0.3)",
+    fill_color="rgba(255, 182, 193, 0.3)",  # Rosado suave translúcido
     stroke_width=stroke_width,
     stroke_color=stroke_color,
     background_color=bg_color,
-    height=400,  # más grande
-    width=400,   # más grande
+    height=400,  # aumentado
+    width=400,   # aumentado
     key="canvas",
 )
 
