@@ -9,7 +9,7 @@ from streamlit_drawable_canvas import st_canvas
 
 st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layout='centered')
 
-Estilos personalizados con fondo moderno y tipografía
+---------------- ESTILOS PERSONALIZADOS ----------------
 
 st.markdown("""
 <style>
@@ -19,7 +19,7 @@ font-family: 'Trebuchet MS', sans-serif;
 color: #2e2e2e;
 }
 .main {
-background-color: rgba(255, 255, 255, 0.8);
+background-color: rgba(255, 255, 255, 0.85);
 border-radius: 20px;
 padding: 40px;
 box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
@@ -59,8 +59,8 @@ fill_color="rgba(255, 165, 0, 0.3)",
 stroke_width=stroke_width,
 stroke_color=stroke_color,
 background_color=bg_color,
-height=300, # <-- aumentado
-width=300, # <-- aumentado
+height=300, # aumentado
+width=300, # aumentado
 key="canvas",
 )
 
@@ -69,11 +69,11 @@ key="canvas",
 def predictDigit(image):
 model = tf.keras.models.load_model("model/handwritten.h5")
 image = ImageOps.grayscale(image)
-img = image.resize((28,28))
+img = image.resize((28, 28))
 img = np.array(img, dtype='float32') / 255
 plt.imshow(img)
 plt.show()
-img = img.reshape((1,28,28,1))
+img = img.reshape((1, 28, 28, 1))
 pred = model.predict(img)
 result = np.argmax(pred[0])
 return result
