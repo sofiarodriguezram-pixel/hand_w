@@ -12,12 +12,12 @@ st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layo
 st.markdown("""
     <style>
         body {
-            background: linear-gradient(135deg, #ede7f6, #f3e5f5);
+            background-color: #ffeef8;
             font-family: 'Trebuchet MS', sans-serif;
             color: #2e2e2e;
         }
         .main {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.92);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
@@ -25,24 +25,24 @@ st.markdown("""
         h1, h2, h3, h4 {
             text-align: center;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            color: #4A148C;
+            color: #AD1457;
         }
         .stButton button {
-            background-color: #7E57C2;
+            background-color: #F06292;
             color: white;
             border-radius: 10px;
             font-size: 18px;
             transition: 0.3s;
         }
         .stButton button:hover {
-            background-color: #512DA8;
+            background-color: #EC407A;
             transform: scale(1.05);
         }
     </style>
 """, unsafe_allow_html=True)
 
 # TÍTULOS
-st.title('🧠 Reconocimiento de Dígitos escritos a mano')
+st.title('💖 Reconocimiento de Dígitos escritos a mano')
 st.subheader("✍️ Dibuja el dígito en el panel y presiona 'Predecir'")
 
 # CONFIGURACIÓN DEL CANVAS
@@ -55,8 +55,8 @@ canvas_result = st_canvas(
     stroke_width=stroke_width,
     stroke_color=stroke_color,
     background_color=bg_color,
-    height=300,  # aumentado
-    width=300,   # aumentado
+    height=400,  # más grande
+    width=400,   # más grande
     key="canvas",
 )
 
@@ -78,7 +78,6 @@ if st.button('🔍 Predecir'):
     if canvas_result.image_data is not None:
         input_numpy_array = np.array(canvas_result.image_data)
         input_image = Image.fromarray(input_numpy_array.astype('uint8'), 'RGBA')
-        # asegúrate de que la carpeta 'prediction' exista o crea manualmente
         input_image.save('prediction/img.png')
         img = Image.open("prediction/img.png")
         res = predictDigit(img)
