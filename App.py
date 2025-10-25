@@ -12,7 +12,7 @@ st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layo
 st.markdown("""
     <style>
         body {
-            background-color: #fdeef4; /* Rosado pastel claro */
+            background-color: #fcd4e4; /* Rosado pastel claro */
             font-family: 'Trebuchet MS', sans-serif;
             color: #2e2e2e;
         }
@@ -94,3 +94,4 @@ dígitos escritos a mano.
 
 Basado en el desarrollo de Vinay Uniyal.
 """)
+
