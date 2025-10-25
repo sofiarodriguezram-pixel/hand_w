@@ -14,12 +14,12 @@ st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layo
 st.markdown("""
 <style>
 body {
-background: linear-gradient(135deg, #e8eaf6, #f3e5f5);
+background: linear-gradient(135deg, #ede7f6, #f3e5f5);
 font-family: 'Trebuchet MS', sans-serif;
 color: #2e2e2e;
 }
 .main {
-background-color: rgba(255, 255, 255, 0.85);
+background-color: rgba(255, 255, 255, 0.9);
 border-radius: 20px;
 padding: 40px;
 box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
